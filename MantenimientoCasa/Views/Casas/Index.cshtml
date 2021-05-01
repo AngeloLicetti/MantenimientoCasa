@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MantenimientoCasa.Models.Casa>
+
+@{
+    ViewBag.Title = "Listado de casas";
+}
+
+<h2>Listado de casas</h2>
+
+<p>
+    @Html.ActionLink("Agregar nueva casa", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.numPuertas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numVentanas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.anoConstruccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.metrosArea)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.numPuertas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numVentanas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.anoConstruccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.metrosArea)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

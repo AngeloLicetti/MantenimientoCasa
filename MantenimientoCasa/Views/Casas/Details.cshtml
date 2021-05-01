@@ -1,0 +1,57 @@
+﻿@model MantenimientoCasa.Models.Casa
+
+@{
+    ViewBag.Title = "Detalles de casa";
+}
+
+<h2>Detalles de casa</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numPuertas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numPuertas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numVentanas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numVentanas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anoConstruccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.anoConstruccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.metrosArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.metrosArea)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Regresar a listado", "Index")
+</p>
